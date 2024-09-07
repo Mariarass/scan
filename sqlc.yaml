@@ -1,0 +1,19 @@
+version: "2"
+cloud:
+  organization: ""
+  project: ""
+  hostname: ""
+servers: []
+sql:
+  - engine: "postgresql"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    gen:
+      go:
+        package: "tutorial"          # Имя пакета Go
+        out: "./db/sqlc"            # Путь к директории для генерации кода
+overrides:
+  go: null
+plugins: []
+rules: []
+options: {}
